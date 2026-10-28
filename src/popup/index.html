@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;" />
+    <title>Fixed Sites</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="popup-shell" aria-label="网页窗口导航">
+      <header class="popup-toolbar">
+        <div class="popup-navigation" aria-label="网页导航">
+          <button type="button" class="popup-button" data-action="back" aria-label="返回" title="返回（Alt+←）">‹</button>
+          <button type="button" class="popup-button" data-action="forward" aria-label="前进" title="前进（Alt+→）">›</button>
+          <button type="button" class="popup-button" data-action="reload" aria-label="刷新" title="刷新（Ctrl+R / F5）">↻</button>
+        </div>
+        <div class="popup-address" role="textbox" aria-readonly="true" aria-label="当前网页地址" title="当前网页地址">
+          <span class="popup-address-mark" aria-hidden="true">⌁</span>
+          <span id="popup-address-value" class="popup-address-value">正在打开…</span>
+        </div>
+        <button type="button" class="popup-button popup-action" data-action="copy" aria-label="复制当前地址" title="复制当前地址">⧉</button>
+        <button type="button" class="popup-button popup-action" data-action="external" aria-label="在系统浏览器打开" title="在系统浏览器打开">↗</button>
+        <span id="popup-status" class="popup-status" role="status" aria-live="polite"></span>
+      </header>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

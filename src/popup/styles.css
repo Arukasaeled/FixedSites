@@ -1,0 +1,25 @@
+:root {
+  color-scheme: dark;
+  --popup-ink: #edf0e8;
+  --popup-muted: #9ca59d;
+  --popup-rule: #3b4540;
+  --popup-panel: #151c25;
+  --popup-panel-deep: #202b31;
+  --popup-accent: #92be42;
+}
+
+* { box-sizing: border-box; }
+html, body, .popup-shell { width: 100%; height: 100%; margin: 0; }
+body { overflow: hidden; background: var(--popup-panel); font-family: "Segoe UI", "Microsoft YaHei", sans-serif; }
+.popup-toolbar { height: 48px; display: flex; align-items: center; gap: 6px; padding: 0 10px; border-bottom: 1px solid var(--popup-rule); background: var(--popup-panel); color: var(--popup-ink); }
+.popup-navigation { display: flex; flex: 0 0 auto; gap: 2px; }
+.popup-button { width: 30px; height: 30px; padding: 0; border: 1px solid transparent; border-radius: 2px; color: var(--popup-ink); background: transparent; font: 20px/1 "Segoe UI Symbol", "Segoe UI", sans-serif; cursor: pointer; }
+.popup-button:hover:not(:disabled), .popup-button:focus-visible:not(:disabled) { border-color: var(--popup-accent); background: var(--popup-panel-deep); color: var(--popup-accent); outline: none; }
+.popup-button:disabled { color: #58615e; cursor: default; }
+.popup-action { font-size: 16px; }
+.popup-address { min-width: 0; flex: 1; height: 30px; display: flex; align-items: center; gap: 8px; padding: 0 10px; border: 1px solid var(--popup-rule); background: #11171c; color: var(--popup-muted); overflow: hidden; }
+.popup-address-mark { flex: 0 0 auto; color: var(--popup-accent); font-size: 14px; }
+.popup-address-value { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font: 11px/1.2 Consolas, "Cascadia Mono", monospace; user-select: text; }
+.popup-status { flex: 0 0 auto; min-width: 0; max-width: 160px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; color: var(--popup-muted); font-size: 10px; }
+.popup-status.is-error { color: #d78c7b; }
+.popup-status.is-loading { color: var(--popup-accent); }

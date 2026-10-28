@@ -1,0 +1,27 @@
+[
+  {
+    "id": "dsh",
+    "name": "DSH",
+    "processName": "DSH NEXT",
+    "launchPath": ""
+  },
+  {
+    "id": "antigravity",
+    "name": "Antigravity",
+    "processName": "Antigravity",
+    "launchPath": ""
+  },
+  {
+    "id": "claude",
+    "name": "Claude",
+    "processName": "Claude",
+    "launchPath": ""
+  },
+  {
+    "id": "codex",
+    "name": "Codex",
+    "processName": "ChatGPT",
+    "executableContains": "\\OpenAI.Codex_",
+    "launchPath": ""
+  }
+]

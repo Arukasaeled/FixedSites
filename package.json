@@ -1,0 +1,86 @@
+{
+  "name": "fixed-sites-browser",
+  "productName": "Fixed Sites",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "description": "A Windows workspace for websites and existing desktop Agents.",
+  "main": "src/main.js",
+  "scripts": {
+    "build:ui": "node scripts/build-ui.cjs",
+    "start": "npm run build:ui && electron .",
+    "dist:win": "npm run build:ui && node scripts/build-portable.cjs",
+    "check:public": "node scripts/check-public-source.cjs",
+    "test:canvas": "electron test/canvas-smoke.cjs"
+  },
+  "build": {
+    "appId": "local.fixedsites.browser",
+    "productName": "Fixed Sites",
+    "directories": {
+      "output": "dist/release-1.0.0"
+    },
+    "files": [
+      "src/main.js",
+      "src/preload.js",
+      "src/agent-host.js",
+      "src/agent-observer.ps1",
+      "src/agent-task-status.js",
+      "src/json-store.js",
+      "src/config-writer.js",
+      "src/page-safety.js",
+      "src/agent-presets.json",
+      "src/popup/**/*",
+      "src/ui-dist/**/*",
+      "package.json",
+      "src/canvas-layout.js",
+      "LICENSE",
+      "THIRD_PARTY_NOTICES.md"
+    ],
+    "extraResources": [
+      {
+        "from": "src/native/bin/AgentBridge-1.0.0.exe",
+        "to": "native/AgentBridge.exe"
+      }
+    ],
+    "portable": {
+      "unpackDirName": "FixedSitesBrowser-1.0.0-runtime"
+    },
+    "win": {
+      "target": [
+        "portable"
+      ],
+      "icon": "src/ui/brand/fixed-sites.ico",
+      "signExecutable": false
+    },
+    "artifactName": "FixedSites-${version}-portable.${ext}"
+  },
+  "devDependencies": {
+    "@mantine/core": "9.7.1",
+    "@mantine/hooks": "9.7.1",
+    "@radix-ui/react-avatar": "1.2.7",
+    "@radix-ui/react-dropdown-menu": "2.1.25",
+    "@tailwindcss/cli": "4.3.3",
+    "daisyui": "5.7.47",
+    "electron": "44.6.0",
+    "electron-builder": "26.15.3",
+    "esbuild": "0.28.2",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "tailwindcss": "4.3.3"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "author": {
+    "name": "Arukasaeled",
+    "url": "https://github.com/Arukasaeled"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Arukasaeled/FixedSites.git"
+  },
+  "homepage": "https://github.com/Arukasaeled/FixedSites",
+  "bugs": {
+    "url": "https://github.com/Arukasaeled/FixedSites/issues"
+  }
+}

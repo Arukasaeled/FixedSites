@@ -1,0 +1,33 @@
+node_modules/
+dist/
+src/ui-dist/
+src/native/bin/
+test/runtime-*/
+qa/
+recovery*/
+publish/
+.env
+.env.*
+*.log
+*.dmp
+*.pdb
+*.user
+*.suo
+*.pem
+*.key
+*.pfx
+**/sites.json*
+**/agents.json*
+**/agent-windows.json*
+**/manual-snapshot.json*
+**/Cookies*
+**/Login Data*
+**/Web Data*
+**/Local State
+**/Preferences
+**/Partitions/
+**/Local Storage/
+**/Session Storage/
+**/Network/
+.DS_Store
+Thumbs.db
