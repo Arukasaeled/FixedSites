@@ -61,7 +61,7 @@
     "@radix-ui/react-dropdown-menu": "2.1.25",
     "@tailwindcss/cli": "4.3.3",
     "daisyui": "5.7.47",
-    "electron": "44.9.1",
+    "electron": "44.10.0",
     "electron-builder": "26.15.3",
     "esbuild": "0.28.2",
     "react": "19.3.0",
