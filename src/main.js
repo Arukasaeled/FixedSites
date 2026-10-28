@@ -2360,7 +2360,7 @@ function createWindow() {
   mainWindow.webContents.on('will-redirect', event => event.preventDefault());
   createTray();
   agentHost = new AgentHost(app.isPackaged ? path.join(process.resourcesPath, 'native', 'AgentBridge.exe') :
-    path.join(__dirname, 'native', 'bin', 'AgentBridge-1.0.0.exe'), mainWindow, sendState, (shortcut) => {
+    path.join(__dirname, 'native', 'bin', 'AgentBridge-1.0.1.exe'), mainWindow, sendState, (shortcut) => {
     const pane = canvas.panes.find(p => p.kind === 'agent');
     if (pane) focusCanvasPane(pane.key, false);
     if (shortcut === 'focus-agent') return;

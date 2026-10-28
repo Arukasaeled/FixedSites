@@ -5,7 +5,7 @@ const esbuild = require('esbuild');
 
 const root = path.resolve(__dirname, '..');
 const native = path.join(root, 'src', 'native');
-const bridge = path.join(native, 'bin', 'AgentBridge-1.0.0.exe');
+const bridge = path.join(native, 'bin', 'AgentBridge-1.0.1.exe');
 const sources = ['NativeWindows.cs', 'AgentBridge.cs', 'app.manifest'].map((file) => path.join(native, file));
 // Compile the small Windows helper only when its sources changed. No download,
 // extra runtime installation or native Node module is required.

@@ -6,7 +6,7 @@ FixedSites，简称 FS，是一个面向 Windows 的本地桌面工作区，用�
 
 FS 保留网站本身的页面、登录流程和操作方式。Agent 也继续使用原来的桌面程序、对话与任务，FS 主要负责窗口接入、显示、布局和还原。
 
-本文按 **v1.0（应用版本 1.0.0）** 的现有实现整理，涵盖项目介绍、全部主要功能、使用方式、数据存储与开发说明。
+本文按 **v1.0.1（应用版本 1.0.1）** 的现有实现整理，涵盖项目介绍、全部主要功能、使用方式、数据存储与开发说明。v1.0.1 更新了安全依赖，功能范围与 v1.0 一致。
 
 ![网页与桌面窗口并排显示](docs/workspace.png)
 
@@ -45,7 +45,7 @@ FS 适合经常在几个固定网站和桌面应用之间切换的人。它把�
 
 ## 下载、启动与升级
 
-在 [v1.0 Release](https://github.com/Arukasaeled/FixedSites/releases/tag/v1.0) 下载 `FixedSites-1.0.0-portable.exe`。当前提供 **Windows x64 便携版**，下载后直接运行。
+在 [v1.0.1 Release](https://github.com/Arukasaeled/FixedSites/releases/tag/v1.0.1) 下载 `FixedSites-1.0.1-portable.exe`。当前提供 **Windows x64 便携版**，下载后直接运行。
 
 Release 同时提供 `SHA256SUMS`，可用于核对程序文件。当前程序没有进行代码签名。
 
@@ -375,7 +375,7 @@ npm start
 npm run dist:win
 ```
 
-v1.0 的产物目录为 `dist/release-1.0.0/`。便携启动器使用版本独立的运行缓存，与用户数据目录分开，减少不同版本覆盖正在运行程序文件的风险。
+v1.0.1 的产物目录为 `dist/release-1.0.1/`。便携启动器使用版本独立的运行缓存，与用户数据目录分开，减少不同版本覆盖正在运行程序文件的风险。
 
 ### 本地检查
 

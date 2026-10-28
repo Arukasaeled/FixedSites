@@ -14,10 +14,10 @@ function patchPortableTemplate(source) {
   const guard = `  ; Separate per-session/per-user readiness from the persistent cache marker.
   ; A second launcher never removes files belonging to a running first instance.
   ReadEnvStr $R6 USERNAME
-  System::Call 'kernel32::CreateEventW(p 0, i 1, i 0, w "Local\\FixedSitesPortableReady-1.0.0-$R6") p.r4'
+  System::Call 'kernel32::CreateEventW(p 0, i 1, i 0, w "Local\\FixedSitesPortableReady-1.0.1-$R6") p.r4'
   StrCpy $FixedSitesReadyHandle $4
   IntCmp $FixedSitesReadyHandle 0 fixedsites_failed 0 0
-  System::Call 'kernel32::CreateMutexW(p 0, i 0, w "Local\\FixedSitesPortable-1.0.0-$R6") p.r5 ?e'
+  System::Call 'kernel32::CreateMutexW(p 0, i 0, w "Local\\FixedSitesPortable-1.0.1-$R6") p.r5 ?e'
   Pop $R7
   StrCpy $FixedSitesMutexHandle $5
   IntCmp $FixedSitesMutexHandle 0 fixedsites_failed 0 0

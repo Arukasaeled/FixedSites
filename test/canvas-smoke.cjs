@@ -39,7 +39,7 @@ let qa, actor;
   const invoke = async code => { const result = await qa.main.webContents.executeJavaScript(code, true); if (result?.ok === false) throw new Error(result.error); await pause(100); return result; };
   const click = id => invoke(`document.getElementById(${JSON.stringify(id)}).click(); true`);
   const nativeVisible = () => {
-    const executable = path.join(root, 'src/native/bin/AgentBridge-1.0.0.exe').replaceAll("'", "''");
+    const executable = path.join(root, 'src/native/bin/AgentBridge-1.0.1.exe').replaceAll("'", "''");
     return execFileSync('powershell.exe', ['-NoProfile', '-Command', `$a=[Reflection.Assembly]::LoadFile('${executable}'); $m=$a.GetType('Win32').GetMethod('IsWindowVisible',[Reflection.BindingFlags]'NonPublic,Static'); $m.Invoke($null,[object[]]@([IntPtr][Convert]::ToInt64('${handle.slice(2)}',16)))`], { encoding: 'utf8', windowsHide: true }).trim() === 'True';
   };
   if (process.argv.includes('--capture-only')) {
